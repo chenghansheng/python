@@ -8,13 +8,13 @@ application.debug = True
 
 @application.route('/')
 def hello_world():
-  return "Hello World GDS!"
+  return "Hello World GDS!
 
 @application.route('/env')
 def env():
   envs = "Environments: <br>"
   for key in os.environ.keys():
-    envs = envs + "%s: %s<br>"  (key,os.environ[key])
+    envs = envs + "%s: %s<br>" % (key,os.environ[key])
 
   return envs
 
